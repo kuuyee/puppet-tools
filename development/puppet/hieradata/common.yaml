@@ -1,0 +1,14 @@
+---
+
+adminserver_address: "10.10.10.10"
+
+domain_adminserver_address: &domain_adminserver_address "%{hiera('adminserver_address')}"
+
+
+hosts:
+  'localhost':
+    ip:                "127.0.0.1"
+    host_aliases:      'localhost.localdomain,localhost4,localhost4.localdomain4'
+  'admin.example.com':
+    ip:                *domain_adminserver_address
+    host_aliases:      'admin'

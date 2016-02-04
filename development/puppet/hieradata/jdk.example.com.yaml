@@ -1,0 +1,4 @@
+---
+
+logoutput:                &logoutput                true
+orawls::weblogic::log_output:   *logoutput
